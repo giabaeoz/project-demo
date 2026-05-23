@@ -1,53 +1,123 @@
+/* Reset cơ bản cho mọi thành phần */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+  background-color: #f0f2f5;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 350px;
+#app {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 700px; /* Nới rộng một chút để chứa nút xóa */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.input-group {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+h2 {
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 25px;
 }
 
-input {
-    flex: 1;
-    padding: 8px;
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-button {
-    padding: 8px 15px;
-    background: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
+.input-section input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.input-section input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.2);
 }
 
-li {
-    background: #eee;
-    margin-bottom: 8px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#addBtn {
+  padding: 10px 20px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
+#addBtn:hover {
+  background-color: #1557b0;
+}
+
+#addBtn:active {
+  transform: scale(0.95);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #444;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f1f3f4;
+}
+
+/* Trang trí nút Xóa */
 .delete-btn {
-    background: #dc3545;
-    padding: 4px 8px;
+  padding: 6px 12px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 24px;
+  color: #333;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+#gpaResult {
+  color: #e53935;
+  font-size: 32px;
+  font-weight: bold;
 }

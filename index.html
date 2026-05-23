@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My To-do List</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>To-Do List DOM Project</h2>
-        
-        <div class="input-group">
-            <input type="text" id="taskInput" placeholder="Nhập công việc cần làm...">
-            <button id="addBtn">Add</button>
-        </div>
 
-        <ul id="taskList">
-            <!-- Thẻ <li> sẽ được tạo bằng DOM ở đây -->
-        </ul>
+  <div id="app">
+    <h2>GPA Calculator</h2>
+    
+    <div class="input-section">
+      <input type="text" id="subject" placeholder="Subject Name (EX: Web design)">
+      <input type="number" id="credits" placeholder="Credit (EX: 3)">
+      <input type="number" id="score" step="0.1" placeholder="Grade (EX: 3.5)">
+      <button id="addBtn">Add Subject</button>
     </div>
 
-    <script src="lib.js"></script>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Credits</th>
+          <th>Grade</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="subjectList">
+        </tbody>
+    </table>
+
+    <h3>GPA Currently: <span id="gpaResult">0.00</span></h3>
+  </div>
+
+  <script src="lib.js"></script>
 </body>
 </html>
